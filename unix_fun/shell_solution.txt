@@ -1,0 +1,12 @@
+# subset the data to only be St. Peter's hospital
+grep Peter Beds.tsv > subset.tsv
+# get the total number of census record
+wc -l subset.tsv
+# sort the date and return first date
+cut -f 13 subset.tsv | sort -t/ -k 3 -k 1 -k 2 | head -1
+# reverse sort and return last date
+cut -f 13 subset.tsv | sort -t/ -k 3 -k 1 -k 2 -r | head -1
+# 10 dates with highest reported available beds
+cut -f 17,13 subset.tsv | sort -k2nr | cut -f 1 | head -10
+# 10 dates with lowest reported available beds
+cut -f 17,13 subset.tsv | sort -k2n | cut -f 1 | head -10
