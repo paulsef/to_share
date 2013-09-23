@@ -1,4 +1,10 @@
 #!/bin/sh
+"""
+For loops in unix!? I had no idea! This simple script
+uses some command substituations and aliases to extract
+a product id and generate some amazon urls
+"""
+
 set -e
 
 parse_products() 
