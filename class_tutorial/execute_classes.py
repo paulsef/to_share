@@ -14,7 +14,7 @@ print recur.name == recur.name.name == recur.name.name == recur.name.name.name
 
 """
 # using subclasses
-ast1 = lc.Asteroid('halebob', 2, 3, 4)
+ast1 = lc.Asteroid('halebop', 2, 3, 4)
 print str(ast1.name) +' has volume ' + str(ast1.volume())
 """
 
